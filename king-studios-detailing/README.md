@@ -23,21 +23,28 @@ python3 -m http.server 8080
 
 ## Sections included
 
-Sticky header + mobile nav, hero, trust stats, services grid (8 services),
+Sticky header + mobile nav, hero, trust stats, services grid (10 services),
 "why choose us" / about, before-after gallery, review carousel (real Google
 review quotes), 3-tier pricing, map + opening hours, FAQ accordion, contact
 form, footer.
+
+Instagram is wired up to the real account, **[@kingstudiios](https://www.instagram.com/kingstudiios/)**
+(14K+ followers) — its bio surfaced three services that weren't in the
+original Google listing (Vehicle Customising, Motorworks, Detailing Courses),
+which are now included as service cards, and confirmed the studio identifies
+itself as Mile End rather than Bow.
 
 ## Before going live — things to customise
 
 - **Photos**: gallery and hero currently use styled colour panels as
   placeholders. Replace with real before/after photos and studio shots in
-  `assets/`.
-- **Instagram handle**: links currently point to `instagram.com` generically —
-  update `href="https://www.instagram.com/"` in `index.html` to the real
-  `@handle`.
-- **Opening hours**: the hours table is an estimate (Mon–Sat 8am–9pm). Confirm
-  exact hours and update the `<table class="hours">` block.
+  `assets/` — there's no shortage of real content on
+  [@kingstudiios](https://www.instagram.com/kingstudiios/).
+- **Opening hours**: third-party listings disagree (Google shows "closes
+  9pm", other directories show anywhere from 9am–5pm to 9am–11pm daily). The
+  site currently shows "Every day, 9:00 AM – 9:00 PM" with a note pointing
+  visitors to Instagram/phone to confirm — replace with confirmed hours in
+  the `<table class="hours">` block once known.
 - **Contact form**: `js/script.js` currently opens the visitor's email client
   via a `mailto:` link with a placeholder address
   (`info@kingstudiosdetailing.co.uk`). For a production site, wire the form
