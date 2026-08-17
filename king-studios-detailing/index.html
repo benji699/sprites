@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <!-- ===== Top utility bar ===== -->
 <div class="topbar">
   <div class="container topbar__inner">
@@ -106,13 +108,39 @@
     </a>
   </section>
 
+  <!-- ===== Marquee ticker ===== -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span class="marquee__item"><span class="stars-inline">★★★★★</span> 5.0 on Google</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">96 Five-Star Reviews</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">14K+ on Instagram</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">@kingstudiios</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Mile End, London</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item"><span class="stars-inline">★★★★★</span> 5.0 on Google</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">96 Five-Star Reviews</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">14K+ on Instagram</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">@kingstudiios</span>
+      <span class="marquee__dot"></span>
+      <span class="marquee__item">Mile End, London</span>
+      <span class="marquee__dot"></span>
+    </div>
+  </div>
+
   <!-- ===== Trust strip ===== -->
   <section class="trust">
     <div class="container trust__inner">
-      <div class="trust__item reveal"><span class="trust__num">5.0★</span><span>Average Rating</span></div>
-      <div class="trust__item reveal"><span class="trust__num">96</span><span>Five-Star Reviews</span></div>
-      <div class="trust__item reveal"><span class="trust__num">14K+</span><span>Instagram Followers</span></div>
-      <div class="trust__item reveal"><span class="trust__num">900+</span><span>Cars Showcased</span></div>
+      <div class="trust__item reveal"><span class="trust__num count-up" data-target="5" data-decimals="1" data-suffix="★">0★</span><span>Average Rating</span></div>
+      <div class="trust__item reveal"><span class="trust__num count-up" data-target="96">0</span><span>Five-Star Reviews</span></div>
+      <div class="trust__item reveal"><span class="trust__num count-up" data-target="14" data-suffix="K+">0K+</span><span>Instagram Followers</span></div>
+      <div class="trust__item reveal"><span class="trust__num count-up" data-target="900" data-suffix="+">0+</span><span>Cars Showcased</span></div>
     </div>
   </section>
 
@@ -272,45 +300,69 @@
       <p class="eyebrow reveal center">The Transformation</p>
       <h2 class="section__title reveal center">Before &amp; After</h2>
       <p class="section__lead reveal center">
-        A snapshot of the kind of transformation our clients see. Swap these panels for your own
-        before/after photography whenever you're ready.
+        Drag each slider to compare before and after. These four stories are drawn straight from
+        real King Studios customer reviews &mdash; swap the stylised panels for the actual photos
+        or clips once you share them and they'll show real cars, not colour blocks.
       </p>
 
       <div class="grid gallery__grid">
         <figure class="gallery-card reveal">
-          <div class="gallery-card__split">
-            <div class="gallery-card__half gallery-card__half--before">Before</div>
-            <div class="gallery-card__half gallery-card__half--after">After</div>
+          <div class="ba-slider" style="--pos:50%">
+            <div class="ba-slider__layer ba-slider__layer--after"><div class="ba-slider__fill ba-slider__fill--after"></div></div>
+            <div class="ba-slider__layer ba-slider__layer--before"><div class="ba-slider__fill ba-slider__fill--before"></div></div>
+            <span class="ba-slider__tag ba-slider__tag--before">Before</span>
+            <span class="ba-slider__tag ba-slider__tag--after">After</span>
+            <div class="ba-slider__handle"><div class="ba-slider__grip"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 6 2 12l6 6 1.4-1.4L5.8 13H12v-2H5.8l3.6-3.6L8 6Zm8 0-1.4 1.4L18.2 11H12v2h6.2l-3.6 3.6L16 18l6-6-6-6Z"/></svg></div></div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Drag to compare before and after: wheel refurbishment">
           </div>
-          <figcaption>Wheel Refurbishment</figcaption>
+          <figcaption>Wheel Refurbishment &mdash; BMW 440i</figcaption>
+          <p class="ba-story">"Took my 440i for wheels refurbished and a full deep clean&hellip; absolutely thrilled with the results." <cite>&mdash; Jabran Fardos, Google review</cite></p>
         </figure>
+
         <figure class="gallery-card reveal">
-          <div class="gallery-card__split gallery-card__split--alt2">
-            <div class="gallery-card__half gallery-card__half--before">Before</div>
-            <div class="gallery-card__half gallery-card__half--after">After</div>
+          <div class="ba-slider ba-slider--alt2" style="--pos:50%">
+            <div class="ba-slider__layer ba-slider__layer--after"><div class="ba-slider__fill ba-slider__fill--after"></div></div>
+            <div class="ba-slider__layer ba-slider__layer--before"><div class="ba-slider__fill ba-slider__fill--before"></div></div>
+            <span class="ba-slider__tag ba-slider__tag--before">Before</span>
+            <span class="ba-slider__tag ba-slider__tag--after">After</span>
+            <div class="ba-slider__handle"><div class="ba-slider__grip"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 6 2 12l6 6 1.4-1.4L5.8 13H12v-2H5.8l3.6-3.6L8 6Zm8 0-1.4 1.4L18.2 11H12v2h6.2l-3.6 3.6L16 18l6-6-6-6Z"/></svg></div></div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Drag to compare before and after: paint correction">
           </div>
-          <figcaption>Stage 3 Machine Polish</figcaption>
+          <figcaption>Stage 1&ndash;3 Paint Correction</figcaption>
+          <p class="ba-story">"Best in the industry! The transformation from the before/after photos speaks for itself." <cite>&mdash; ZH19, Local Guide</cite></p>
         </figure>
+
         <figure class="gallery-card reveal">
-          <div class="gallery-card__split gallery-card__split--alt3">
-            <div class="gallery-card__half gallery-card__half--before">Before</div>
-            <div class="gallery-card__half gallery-card__half--after">After</div>
+          <div class="ba-slider ba-slider--alt3" style="--pos:50%">
+            <div class="ba-slider__layer ba-slider__layer--after"><div class="ba-slider__fill ba-slider__fill--after"></div></div>
+            <div class="ba-slider__layer ba-slider__layer--before"><div class="ba-slider__fill ba-slider__fill--before"></div></div>
+            <span class="ba-slider__tag ba-slider__tag--before">Before</span>
+            <span class="ba-slider__tag ba-slider__tag--after">After</span>
+            <div class="ba-slider__handle"><div class="ba-slider__grip"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 6 2 12l6 6 1.4-1.4L5.8 13H12v-2H5.8l3.6-3.6L8 6Zm8 0-1.4 1.4L18.2 11H12v2h6.2l-3.6 3.6L16 18l6-6-6-6Z"/></svg></div></div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Drag to compare before and after: interior deep clean">
           </div>
           <figcaption>Interior Deep Clean</figcaption>
+          <p class="ba-story">"Adeel did a fantastic job cleaning our passenger seat and surrounding areas. Amazing quality of work." <cite>&mdash; Google review</cite></p>
         </figure>
+
         <figure class="gallery-card reveal">
-          <div class="gallery-card__split gallery-card__split--alt4">
-            <div class="gallery-card__half gallery-card__half--before">Before</div>
-            <div class="gallery-card__half gallery-card__half--after">After</div>
+          <div class="ba-slider ba-slider--alt4" style="--pos:50%">
+            <div class="ba-slider__layer ba-slider__layer--after"><div class="ba-slider__fill ba-slider__fill--after"></div></div>
+            <div class="ba-slider__layer ba-slider__layer--before"><div class="ba-slider__fill ba-slider__fill--before"></div></div>
+            <span class="ba-slider__tag ba-slider__tag--before">Before</span>
+            <span class="ba-slider__tag ba-slider__tag--after">After</span>
+            <div class="ba-slider__handle"><div class="ba-slider__grip"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 6 2 12l6 6 1.4-1.4L5.8 13H12v-2H5.8l3.6-3.6L8 6Zm8 0-1.4 1.4L18.2 11H12v2h6.2l-3.6 3.6L16 18l6-6-6-6Z"/></svg></div></div>
+            <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Drag to compare before and after: scratch repair">
           </div>
-          <figcaption>Scratch &amp; Scuff Repair</figcaption>
+          <figcaption>Scratch &amp; Swirl Repair &mdash; VW Golf R</figcaption>
+          <p class="ba-story">"Foxes turned my brand new Golf R into a climbing frame&hellip; King Studios brought it back to showroom condition." <cite>&mdash; Bobby Elahi, Google review</cite></p>
         </figure>
       </div>
 
       <div class="gallery__cta reveal">
         <a href="https://www.instagram.com/kingstudiios/" target="_blank" rel="noopener" class="btn btn--outline">
           <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM17.8 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
-          See More on Instagram
+          Watch the real transformations on Instagram
         </a>
       </div>
     </div>
@@ -322,7 +374,7 @@
       <p class="eyebrow reveal center">Reviews</p>
       <h2 class="section__title reveal center">96 Five-Star Reviews on Google</h2>
       <div class="rating-banner reveal">
-        <span class="rating-banner__num">5.0</span>
+        <span class="rating-banner__num count-up" data-target="5" data-decimals="1">0</span>
         <div>
           <div class="stars-inline stars-inline--lg">★★★★★</div>
           <span>Based on 96 Google reviews</span>
