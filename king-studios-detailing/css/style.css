@@ -443,7 +443,11 @@ h2.center, p.section__lead.center { margin-left: auto; margin-right: auto; }
 }
 .ba-story { font-size: .87rem; margin: .35em 0 0; }
 .ba-story cite { color: var(--gold-dark); font-style: normal; font-weight: 600; }
-.gallery__cta { text-align: center; margin-top: 48px; }
+.ig-featured { margin-top: 56px; text-align: center; }
+.ig-featured__title { margin-bottom: 28px; }
+.ig-embed { display: flex; justify-content: center; }
+.ig-embed iframe { border-radius: var(--radius) !important; }
+.gallery__cta { text-align: center; margin-top: 40px; }
 
 /* ===== Reviews / Carousel ===== */
 .rating-banner {
